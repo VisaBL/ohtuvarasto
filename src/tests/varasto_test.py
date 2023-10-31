@@ -43,7 +43,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(20)
 
         self.assertAlmostEqual(self.varasto.saldo, 10)
-
+    # Uudet testit mitkä lisäävät kattavuuden 100%:iin 
     def test_varastosta_otetaan_enemman_varasto_ei_mene_pakkaselle(self):
         self.varasto.lisaa_varastoon(5)
         self.varasto.ota_varastosta(10)
