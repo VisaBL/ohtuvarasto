@@ -1,0 +1,33 @@
+
+
+[MASTER]
+ignore='tests','varasto_test'
+
+
+[MESSAGE CONTROL]
+
+
+disable=raw-checker-failed,
+        bad-inline-option,
+        locally-disabled,
+        file-ignored,
+        suppressed-message,
+        useless-suppression,
+        deprecated-pragma,
+        use-symbolic-message-instead,
+        missing-module-docstring,
+        missing-function-docstring,
+        missing-class-docstring,
+
+
+[BASIC]
+
+[FORMAT]
+max-line-length=100
+[DESIGN]
+max-statements=15
+too-many-return-statements=
+
+[REFACTORING]
+max-nested-blocks=2
+

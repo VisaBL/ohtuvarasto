@@ -43,7 +43,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(20)
 
         self.assertAlmostEqual(self.varasto.saldo, 10)
-    # Uudet testit mitkä lisäävät kattavuuden 100%:iin 
+    # Uudet testit mitkä lisäävät kattavuuden 100%:iin
     def test_varastosta_otetaan_enemman_varasto_ei_mene_pakkaselle(self):
         self.varasto.lisaa_varastoon(5)
         self.varasto.ota_varastosta(10)
@@ -55,27 +55,27 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(saatu_maaara, 5)
 
     def test_ei_voi_luoda_negatiivista_varastoa(self):
-        Negatiivinen_varasto = Varasto(-5.0)
-        self.assertAlmostEqual(Negatiivinen_varasto.tilavuus, 0)
+        negatiivinen_varasto = Varasto(-5.0)
+        self.assertAlmostEqual(negatiivinen_varasto.tilavuus, 0)
 
-    def test_ei_voi_luoda_varastoa_liian_täydellä_alkusalolla(self):
-        Negatiivinen_varasto = Varasto(5, 10)
-        print(Negatiivinen_varasto)
-        self.assertAlmostEqual(Negatiivinen_varasto.saldo, 5)
+    def test_ei_voi_luoda_varastoa_liian_taydella_alkusalolla(self):
+        negatiivinen_varasto = Varasto(5, 10)
+        print(negatiivinen_varasto)
+        self.assertAlmostEqual(negatiivinen_varasto.saldo, 5)
 
     def test_ei_voi_luoda_varastoa_negatiivisella_alkusalolla(self):
-        Negatiivinen_varasto = Varasto(5, -10)
-        self.assertAlmostEqual(Negatiivinen_varasto.saldo, 0)
+        negatiivinen_varasto = Varasto(5, -10)
+        self.assertAlmostEqual(negatiivinen_varasto.saldo, 0)
 
     def test_ei_voi_ottaa_negatiivista_maaraa(self):
         self.varasto.ota_varastosta(-5)
         self.assertAlmostEqual(self.varasto.saldo, 0)
-    
+
     def test_ei_voi_lisata_negatiivista_maaraa(self):
         self.varasto.lisaa_varastoon(-5)
         self.assertAlmostEqual(self.varasto.saldo, 0)
-    
+
     def test_varaston_str_methodi_toimii(self):
-        oikein = f"saldo = 0, vielä tilaa 10"
+        oikein = "saldo = 0, vielä tilaa 10"
         tulostus = str(self.varasto)
         self.assertAlmostEqual(tulostus, oikein)
