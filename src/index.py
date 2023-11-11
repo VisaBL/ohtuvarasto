@@ -19,7 +19,16 @@ def main():
     mehua.lisaa_varastoon(50.7)
     print(f"Mehuvarasto: {mehua}")
     print("Otetaan 3.14")
-
+    x=1
+    match x:
+        case 0:
+            return 0
+        case 1:
+            return 1
+        case 2:
+            return 2
+        case 3:
+            return 3
 
 
 if __name__ == "__main__":

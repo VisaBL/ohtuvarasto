@@ -26,7 +26,7 @@ disable=raw-checker-failed,
 max-line-length=100
 [DESIGN]
 max-statements=15
-too-many-return-statements=
+max-returns=3
 
 [REFACTORING]
 max-nested-blocks=2
